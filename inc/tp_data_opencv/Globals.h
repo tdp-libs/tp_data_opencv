@@ -21,7 +21,7 @@ TDP_DECLARE_ID(                   cvFeaturesSID,                      "CV featur
 //TDP_DECLARE_ID(                convertImagesSID,                   "Convert images")
 
 //##################################################################################################
-//! Add the collection factories that this module provides to the StepDelegateMap
+//! Add the collection factories that this module provides to the CollectionFactory
 void createCollectionFactories(tp_data::CollectionFactory& collectionFactory);
 }
 
