@@ -5,8 +5,8 @@
 
 namespace tp_image_utils
 {
-struct ColorMap;
-struct ByteMap;
+class ColorMap;
+class ByteMap;
 }
 
 namespace cv
