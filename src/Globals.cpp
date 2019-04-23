@@ -21,4 +21,12 @@ void createCollectionFactories(tp_data::CollectionFactory& collectionFactory)
   collectionFactory.addMemberFactory(new CVFeaturesMemberFactory());
 }
 
+REGISTER_CREATE_COLLECTION_FACTORIES;
+
+//##################################################################################################
+int staticInit()
+{
+  return 0;
+}
+
 }
