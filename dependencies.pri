@@ -4,7 +4,7 @@ DEPENDENCIES += tp_data_features
 INCLUDEPATHS += tp_data_opencv/inc/
 LIBRARIES    += tp_data_opencv
 
-TP_STATIC_INIT += wrldcv_pipeline_theia
+TP_STATIC_INIT += tp_data_opencv
 
 LIBS += -lopencv_features2d
 LIBS += -lopencv_core
