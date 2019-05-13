@@ -33,7 +33,7 @@ void CVFeaturesMember::populateFeatures()
   //      feature->coord2DNormalized = {(f.x*float(feature->coord2D.x))-1.0f, (f.y*float(feature->coord2D.y))+1.0f};
   //      feature->kp = featurePoint;
   //      feature->color = tpGetMapValue(featureColors, feature->coord2D, randomColor());
-  //      feature->meanColor = wrldcv_basic_types::meanColor(image->image, feature->coord2D, 5);
+  //      feature->meanColor = meanColor(image->image, feature->coord2D, 5);
   //      featureCollection->addFeature(feature);
   //    }
   //  }
