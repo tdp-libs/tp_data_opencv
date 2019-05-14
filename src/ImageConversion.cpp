@@ -62,9 +62,9 @@ void convertImage(const cv::Mat& in, tp_image_utils::ColorMap& out)
 
   {
     TPPixel* o = out.data();
-    TPPixel* oMax = o+(rows*cols*4);
+    TPPixel* oMax = o+(rows*cols);
     uint8_t* i = in.data;
-    for(; o<oMax; i++, o+=4)
+    for(; o<oMax; i+=4, o++)
     {
       o->b = i[0];
       o->g = i[1];
