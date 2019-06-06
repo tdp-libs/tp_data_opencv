@@ -55,11 +55,9 @@ void convertImage(const cv::Mat& in, tp_image_utils::ColorMap& out)
   size_t rows = size_t(in.rows);
   size_t cols = size_t(in.cols);
 
-  if(in.type() != CV_8UC4)
-    return;
-
   out = tp_image_utils::ColorMap(cols, rows);
 
+  if(in.type() == CV_8UC4)
   {
     TPPixel* o = out.data();
     TPPixel* oMax = o+(rows*cols);
@@ -70,6 +68,20 @@ void convertImage(const cv::Mat& in, tp_image_utils::ColorMap& out)
       o->g = i[1];
       o->r = i[2];
       o->a = i[3];
+    }
+  }
+
+  else if(in.type() == CV_8UC1)
+  {
+    TPPixel* o = out.data();
+    TPPixel* oMax = o+(rows*cols);
+    uint8_t* i = in.data;
+    for(; o<oMax; i++, o++)
+    {
+      o->b = *i;
+      o->g = *i;
+      o->r = *i;
+      o->a = 255;
     }
   }
 }
