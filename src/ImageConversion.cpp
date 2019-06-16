@@ -52,8 +52,8 @@ void convertImage(const tp_image_utils::ByteMap& in, cv::Mat& out)
 //##################################################################################################
 void convertImage(const cv::Mat& in, tp_image_utils::ColorMap& out)
 {
-  size_t rows = size_t(in.rows);
-  size_t cols = size_t(in.cols);
+  auto rows = size_t(in.rows);
+  auto cols = size_t(in.cols);
 
   out = tp_image_utils::ColorMap(cols, rows);
 
@@ -89,8 +89,8 @@ void convertImage(const cv::Mat& in, tp_image_utils::ColorMap& out)
 //##################################################################################################
 void convertImage(const cv::Mat& in, tp_image_utils::ByteMap& out)
 {
-  size_t rows = size_t(in.rows);
-  size_t cols = size_t(in.cols);
+  auto rows = size_t(in.rows);
+  auto cols = size_t(in.cols);
 
   if(in.type() != CV_8UC1)
     return;

@@ -90,7 +90,7 @@ CVFeaturesMember* CVFeaturesMember::fromData(std::string& error, const std::stri
       return nullptr;
     }
 
-    size_t nKP = size_t(readInt());
+    auto nKP = size_t(readInt());
     size_t words = calcWords(nKP);
     if(data.size()<(words*4))
     {
