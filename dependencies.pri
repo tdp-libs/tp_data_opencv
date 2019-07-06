@@ -1,3 +1,4 @@
+DEPENDENCIES += tp_image_utils_functions
 DEPENDENCIES += tp_data_image_utils
 DEPENDENCIES += tp_data_math_utils
 DEPENDENCIES += tp_data_features

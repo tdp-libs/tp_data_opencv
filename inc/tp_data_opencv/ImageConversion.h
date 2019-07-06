@@ -9,6 +9,11 @@ class ColorMap;
 class ByteMap;
 }
 
+namespace tp_image_utils_functions
+{
+class ConvolutionMatrix;
+}
+
 namespace cv
 {
 class Mat;
@@ -28,6 +33,9 @@ void convertImage(const cv::Mat& in, tp_image_utils::ColorMap& out);
 
 //##################################################################################################
 void convertImage(const cv::Mat& in, tp_image_utils::ByteMap& out);
+
+//##################################################################################################
+void convertConvolutionMatrix(const tp_image_utils_functions::ConvolutionMatrix& in, cv::Mat& out);
 
 }
 
